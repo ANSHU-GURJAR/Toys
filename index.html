@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToyLand Premium Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="cursor"></div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+🧸 ToyLand
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#categories">Categories</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#offers">Offers</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="nav-right">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Toys...">
+
+<button id="darkModeBtn">
+🌙
+</button>
+
+</div>
+
+</nav>
+
+<!-- FLOATING CART -->
+
+<div class="cart-icon">
+
+<i class="fas fa-shopping-cart"></i>
+
+<span id="cart-count">
+0
+</span>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+Amazing Toys For Kids
+</h1>
+
+<p>
+Premium RC Cars, Robots,
+Educational Toys,
+Building Blocks & More.
+</p>
+
+<button class="shop-btn">
+Shop Now
+</button>
+
+</div>
+
+<div class="hero-image">
+
+<img src="pexels-jansher-chakkittammal-230257630-35297410.jpg"
+alt="Toy">
+
+</div>
+
+</section>
+
+<!-- CATEGORIES -->
+
+<section id="categories">
+
+<h2>
+Shop By Categories
+</h2>
+
+<div class="category-grid">
+
+
+
+<div class="category-card">
+<img src="tomas-petz-O8eo2BC1SOI-unsplash.jpg">
+<h3>Robot Toys</h3>
+</div>
+
+
+
+<div class="category-card">
+<img src="istockphoto-1641521847-612x612.webp">
+<h3>LEGO Blocks</h3>
+</div>
+
+<div class="category-card">
+<img src="photo-1613771404721-1f92d799e49f.avif">
+<h3>Toy Train</h3>
+</div>
+
+<div class="category-card">
+<img src="photo-1597670250484-0e9aff7f8804.avif">
+<h3>Helicopter Toy</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+<h2>
+Featured Products
+</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+
+<img src="pexels-zion-33846175.jpg">
+
+<h3>RC Racing Car</h3>
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+</div>
+
+<div class="price">
+₹999
+</div>
+
+<button onclick="addToCart('RC Racing Car',999)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="pexels-pavel-danilyuk-8294567 copy.jpg">
+
+<h3>Smart Robot</h3>
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+</div>
+
+<div class="price">
+₹1499
+</div>
+
+<button onclick="addToCart('Smart Robot',1499)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="cute-plush-toys-arrangement.jpg">
+
+<h3>Teddy Bear</h3>
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+</div>
+
+<div class="price">
+₹699
+</div>
+
+<button onclick="addToCart('Teddy Bear',699)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="pexels-janncube-6566976.jpg">
+
+<h3>LEGO Blocks</h3>
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+</div>
+
+<div class="price">
+₹899
+</div>
+
+<button onclick="addToCart('LEGO Blocks',899)">
+Add To Cart
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- OFFERS -->
+
+<section id="offers">
+
+<h2>
+Special Offers
+</h2>
+
+<div class="offer-box">
+
+<h3>
+🔥 Flat 30% OFF
+</h3>
+
+<p>
+Use Coupon:
+TOY30
+</p>
+
+</div>
+
+</section>
+
+<!-- CART -->
+
+<section class="cart-section">
+
+<h2>
+🛒 Shopping Cart
+</h2>
+
+<div id="cart-items">
+</div>
+
+<div class="cart-summary">
+
+<p>
+Total Items:
+<span id="total-items">0</span>
+</p>
+
+<p>
+Total Price:
+₹<span id="total">0</span>
+</p>
+
+<button onclick="checkout()">
+Checkout
+</button>
+
+</div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section id="reviews">
+
+<h2>
+Customer Reviews
+</h2>
+
+<div class="review-card">
+⭐⭐⭐⭐⭐ Amazing Quality
+</div>
+
+<div class="review-card">
+⭐⭐⭐⭐⭐ Fast Delivery
+</div>
+
+<div class="review-card">
+⭐⭐⭐⭐⭐ My Kids Loved It
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>
+Contact Us
+</h2>
+
+<form id="contactForm">
+
+<input
+type="text"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+placeholder="Email"
+required>
+
+<textarea
+placeholder="Message"
+required>
+</textarea>
+
+<button>
+Send Message
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<h3>
+ToyLand Premium Store
+</h3>
+
+<p>
+© 2026 All Rights Reserved
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
